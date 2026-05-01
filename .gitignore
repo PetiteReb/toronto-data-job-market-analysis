@@ -179,3 +179,13 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# Project-specific
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# Large or temporary data files
+*.tmp
+*.bak
+data/processed/*.csv
