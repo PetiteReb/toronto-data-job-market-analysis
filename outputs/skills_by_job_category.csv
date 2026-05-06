@@ -1,0 +1,33 @@
+skills,BI analyst,business analyst,data analyst,data consultant,data engineer,data scientist
+Reporting,8,24,31,9,11,10
+Machine Learning,0,0,2,11,5,25
+Python,0,2,11,1,15,12
+SQL,7,3,14,1,12,3
+Data Pipeline,2,0,2,0,23,2
+Spark,0,0,9,0,9,6
+AWS,2,0,3,2,5,11
+Dashboards,3,2,10,0,3,2
+Databricks,0,1,9,2,7,1
+ETL,0,0,1,1,16,2
+Power BI,5,0,10,1,3,1
+Azure,2,1,4,1,9,3
+Statistics,0,2,2,0,0,13
+Predictive Modeling,1,5,1,1,1,7
+Excel,0,2,13,0,0,0
+R,1,0,2,0,1,11
+Snowflake,0,0,5,0,4,2
+Java,0,0,0,2,1,3
+Pandas,0,0,0,0,1,3
+NumPy,0,0,0,0,0,3
+GCP,0,0,0,1,2,0
+Deep Learning,0,0,0,0,0,3
+Looker,0,0,2,0,1,0
+Hadoop,0,0,0,0,1,1
+NLP,0,0,0,0,0,2
+Tableau,0,1,0,0,1,0
+JavaScript,0,0,1,0,1,0
+Airflow,0,0,0,0,0,1
+Kafka,0,0,0,0,0,1
+Data Visualization,0,0,1,0,0,0
+Scala,0,0,0,1,0,0
+dbt,0,0,0,1,0,0
