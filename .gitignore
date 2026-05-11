@@ -188,4 +188,6 @@ cython_debug/
 # Large or temporary data files
 *.tmp
 *.bak
-data/processed/*.csv
+#data/processed/*.csv
+# Job Bank raw downloads -- too large, downloadable from open.canada.ca
+data/raw/jobbank/

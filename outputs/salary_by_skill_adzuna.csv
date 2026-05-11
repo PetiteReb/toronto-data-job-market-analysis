@@ -1,4 +1,4 @@
-skills,count,median,mean,min,max
+﻿_skills_list,count,median,mean,min,max
 Azure,8,127400.0,134025.0,105000.0,199680.0
 SQL,6,121680.0,113100.0,89440.0,128500.0
 Data Pipeline,9,120000.0,112039.0,55120.0,142480.0

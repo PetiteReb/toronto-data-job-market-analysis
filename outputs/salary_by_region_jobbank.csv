@@ -1,0 +1,10 @@
+﻿_region_bucket,count,median,mean,min,max
+London Region,21,96897.0,84163.0,45011.0,118718.0
+Toronto Region,946,96897.0,95358.0,26260.0,205442.0
+Ottawa Region,31,90860.0,88502.0,41600.0,170000.0
+Unknown,10,72900.0,77100.0,33000.0,166400.0
+Windsor-Sarnia Region,11,65603.0,65305.0,41600.0,85000.0
+Kitchener–Waterloo–Barrie Region,35,62400.0,68937.0,38480.0,130000.0
+Other Ontario,9,62400.0,67479.0,36254.0,110000.0
+Northeast Region,22,62400.0,69137.0,48194.0,137500.0
+Hamilton–Niagara Peninsula Region,26,56100.0,63280.0,40000.0,101431.0
