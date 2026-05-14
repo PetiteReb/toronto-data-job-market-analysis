@@ -1,19 +1,31 @@
-# Toronto Data Job Market Analysis
+![Skills Wordcloud](assets/skills_wordcloud.png)
 
-Analysis of 1,000+ data-related job postings in Ontario, Canada, to map the skills landscape, salary trends, and top recruiters in the local data market.
+# Mapping the Ontario Data Job Market
 
-## Project Goal
+This project analyzes 1,369 data job postings across Ontario. Data was collected from two sources: Adzuna's API and Job Bank Open Data (Government of Canada).
 
-As a Canadian data consultant relocating from Europe to Ontario, I built this project to:
-- Map the skills most demanded by Ontario data employers
-- Identify salary benchmarks across roles (Data Analyst, Engineer, Scientist, Consultant, BI)
-- Pinpoint top recruiting companies and emerging hubs beyond Toronto
+## What I Built
 
-##  Dataset
+This project was built in three steps. First, I queried Adzuna's API using six job title keywords: Data Analyst, Data Engineer, Data Scientist, Data Consultant, Business Analyst, and BI Analyst. Second, on Job Bank, I downloaded three months of data (Feb–April 2026, 147,538 rows) and filtered to Ontario postings under four data-related NOC 2021 codes. Both filters were built on the same hypothesis: that these job titles and NOC codes are most representative of the Ontario data job market.
 
-- **Source**: [Adzuna API](https://developer.adzuna.com/) — Canadian job aggregator
-- **Volume**: 1,136 unique job postings collected in May 2026
-- **Coverage**: 6 search terms × Ontario (Data Analyst, Data Consultant, BI Analyst, Data Scientist, Business Analyst, Data Engineer)
+Before analysis, I standardized salaries (hourly, monthly, or yearly), corrected mislabeled units, and removed outliers to run a cross-source comparison on skills, region, and salary.
+
+## Three Findings That Changed My Job Search Strategy
+
+### Finding 1: Job Bank is two markets in one
+
+When I started exploring Job Bank's salary data, I expected to find a uniform distribution, or one skewed toward the lower end of the salary range. Instead, I found something more interesting. Three of the four NOC codes (representing around 41.5% of the dataset) have a near-zero interquartile range (IQR), clustered around a single salary value:
+
+- 68.8% of Data Scientist postings list a salary of $103,730
+- 77.7% of Business Systems Specialist postings list a salary of $96,897
+- 62.5% of Database Analyst postings list salaries between $85,280 and $89,471 (a slightly less concentrated pattern)
+
+This is rare in an open labor market, and likely means these are standardized rates set by a federal pay grid covering hundreds of postings. Only the Information Systems Specialists (NOC 21222, representing 58.5% of the dataset) show a genuine market distribution (IQR = $41,465).
+
+For any job seeker scanning Job Bank salary data, this is critical: Job Bank is a combination of two distinct job markets — one driven by a government pay scale, the other operating as an open market.
+
+![Salary distribution by role across Adzuna and Job Bank](assets/salary_by_role_boxplot.png)
+
 
 ## Tech Stack
 
