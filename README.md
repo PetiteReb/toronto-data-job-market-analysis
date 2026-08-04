@@ -22,19 +22,19 @@ When I started exploring Job Bank's salary data, I expected to find a uniform di
 
 This is rare in an open labor market, and likely means these are standardized rates set by a federal pay grid covering hundreds of postings. Only the Information Systems Specialists (NOC 21222, representing 58.5% of the dataset) show a genuine market distribution (IQR = $41,465).
 
-For any job seeker scanning Job Bank salary data, this is critical: Job Bank is a combination of two distinct job markets — one driven by a government pay scale, the other operating as an open market.
+For any job seeker scanning Job Bank salary data, this is critical: Job Bank is a combination of two distinct job markets,  one driven by a government pay scale, the other operating as an open market.
 
 ![Salary distribution by role across Adzuna and Job Bank](assets/salary_by_role_boxplot.png)
 
 ### Finding 2: After filtering, regional variance is actually wider on Job Bank
 
-After seeing Job Bank's role distribution clustered around standardized rates, I wondered if its regional distribution would be similarly flat. My first hypothesis was that Adzuna — representing the private market — would show wider geographic variance than the public sector.
+After seeing Job Bank's role distribution clustered around standardized rates, I wondered if its regional distribution would be similarly flat. My first hypothesis was that Adzuna,  representing the private market, would show wider geographic variance than the public sector.
 
-My first analysis (n≥5 per region) seemed to confirm it: the region-to-region spread was 2.1× wider on Adzuna ($87.1K) than on Job Bank ($40.8K). But that apparent differentiation was driven by a single small-sample outlier — Durham region (n=5 at $176,800), which inflated the Adzuna range artificially. Once I tightened the threshold to n≥8 per region, the picture reversed: Ontario's regional spread is actually **1.8× wider on Job Bank ($40,797) than on Adzuna ($22,948)**.
+My first analysis (n≥5 per region) seemed to confirm it: the region-to-region spread was 2.1× wider on Adzuna ($87.1K) than on Job Bank ($40.8K). But that apparent differentiation was driven by a single small-sample outlier, Durham region (n=5 at $176,800), which inflated the Adzuna range artificially. Once I tightened the threshold to n≥8 per region, the picture reversed: Ontario's regional spread is actually **1.8× wider on Job Bank ($40,797) than on Adzuna ($22,948)**.
 
-The real finding: Adzuna's regional medians cluster tightly around $90–$112K — reflecting concentrated private hiring in tech hubs (Toronto, Ottawa, Waterloo) — while Job Bank captures real geographic variance across Ontario, from Toronto Region ($96.9K) down to Hamilton–Niagara ($56.1K).
+The real finding: Adzuna's regional medians cluster tightly around $90–$112K, reflecting concentrated private hiring in tech hubs (Toronto, Ottawa, Waterloo),  while Job Bank captures real geographic variance across Ontario, from Toronto Region ($96.9K) down to Hamilton–Niagara ($56.1K).
 
-For a job seeker, this changes the playbook: targeting a tech hub means salary stability and comparability across cities, but stepping outside the hubs — toward Hamilton, Northeast Ontario, or Windsor–Sarnia — means accepting a 30–40% lower median.
+For a job seeker, this changes the playbook: targeting a tech hub means salary stability and comparability across cities, but stepping outside the hubs, toward Hamilton, Northeast Ontario, or Windsor–Sarnia, means accepting a 30–40% lower median.
 
 ![Median salary by region across Adzuna and Job Bank](assets/salary_by_region_barchart.png)
 
@@ -42,9 +42,9 @@ For a job seeker, this changes the playbook: targeting a tech hub means salary s
 
 I wanted to know which technical skills are worth investing time in for someone preparing a data job search in Ontario. So I crossed every Adzuna posting's salary with the skills extracted from its description using regex, keeping only skills mentioned in at least 5 salary-disclosed postings (n≥5).
 
-The ranking is clear: cloud and data engineering skills command the highest medians — Azure at **$127K**, SQL at **$121K**, Data Pipeline at **$120K**. Paradoxically, Reporting — the most frequently mentioned skill of all (n=23) — sits near the bottom at **$89,877**. A universally expected skill that commands no salary premium. Predictive Modeling brings up the rear at **$72K**, though with only n=5 postings, that gap should be read with caution.
+The ranking is clear: cloud and data engineering skills command the highest medians, Azure at **$127K**, SQL at **$121K**, Data Pipeline at **$120K**. Paradoxically, Reporting,  the most frequently mentioned skill of all (n=23),  sits near the bottom at **$89,877**. A universally expected skill that commands no salary premium. Predictive Modeling brings up the rear at **$72K**, though with only n=5 postings, that gap should be read with caution.
 
-For my own positioning as a data consultant, this points to a clear training priority: a cloud certification (Azure) and SQL fluency offer structurally higher premiums than advanced ML specialization — at least in the current Ontario data market.
+For my own positioning as a data consultant, this points to a clear training priority: a cloud certification (Azure) and SQL fluency offer structurally higher premiums than advanced ML specialization, at least in the current Ontario data market.
 
 ![Median salary by skill on Adzuna](assets/salary_by_skill_barchart.png)
 
@@ -54,7 +54,7 @@ A few methodological choices shaped how these findings were produced. I'm docume
 
 ### Cross-source juxtaposition (no merging)
 
-I deliberately chose not to merge the Adzuna and Job Bank datasets. The two sources use different taxonomies — Adzuna uses job titles aligned with private-sector recruiter language (Data Analyst, BI Analyst, etc.), while Job Bank uses Canada's NOC 2021 codes (21211 Data Scientists, 21222 Information Systems Specialists, etc.). Forcing a one-to-one mapping between the two would have introduced noise and possibly bias without analytical gain. Instead, I present both datasets side by side and let the comparison speak for itself.
+I deliberately chose not to merge the Adzuna and Job Bank datasets. The two sources use different taxonomies, Adzuna uses job titles aligned with private-sector recruiter language (Data Analyst, BI Analyst, etc.), while Job Bank uses Canada's NOC 2021 codes (21211 Data Scientists, 21222 Information Systems Specialists, etc.). Forcing a one-to-one mapping between the two would have introduced noise and possibly bias without analytical gain. Instead, I present both datasets side by side and let the comparison speak for itself.
 
 ### Sample-size thresholds
 
@@ -67,7 +67,7 @@ Tightening the threshold cost me four Adzuna regions but produced a more honest 
 
 ### Salary standardization
 
-Job Bank salaries arrived in three units (Hour, Month, Year), with some postings mislabeled — yearly values stored as hourly, hourly values stored as yearly. I corrected unit labels using plausibility heuristics (a yearly value under $20K is almost certainly hourly; an hourly value above $300 is almost certainly yearly), annualized everything to a single comparable scale, and filtered out values outside a plausible range of $25K–$500K annual. This left 1,111 Job Bank postings with usable salary data out of 1,113.
+Job Bank salaries arrived in three units (Hour, Month, Year), with some postings mislabeled, yearly values stored as hourly, hourly values stored as yearly. I corrected unit labels using plausibility heuristics (a yearly value under $20K is almost certainly hourly; an hourly value above $300 is almost certainly yearly), annualized everything to a single comparable scale, and filtered out values outside a plausible range of $25K–$500K annual. This left 1,111 Job Bank postings with usable salary data out of 1,113.
 
 ### Hypothesis testing
 
@@ -83,7 +83,7 @@ The current regex-based extractor caught at least one skill in only 28% of Adzun
 
 ### Federal government coverage
 
-Neither Adzuna nor Job Bank likely captures the full federal hiring market. Adding a third source — for example, the official Government of Canada job portal at jobs.gc.ca — would clarify whether the salary "anchors" observed in Finding 1 (e.g., $103,730 covering 68.8% of Data Scientist postings) come from federal pay grids specifically, or from a wider mix of public-sector contracts.
+Neither Adzuna nor Job Bank likely captures the full federal hiring market. Adding a third source, for example, the official Government of Canada job portal at jobs.gc.ca — would clarify whether the salary "anchors" observed in Finding 1 (e.g., $103,730 covering 68.8% of Data Scientist postings) come from federal pay grids specifically, or from a wider mix of public-sector contracts.
 
 ### Larger sample on the skill × salary intersection
 
